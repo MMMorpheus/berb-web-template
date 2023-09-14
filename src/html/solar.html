@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  @@include('./components/head.html', { "title": "Main page" })
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        @@include('./components/contact.html')
+        <section class="hero">
+          <div class="hero__container">
+            <div class="hero__background hero-solar" aria-hidden="true"></div>
+            @@include('./components/header.html')
+          </div>
+        </section>
+      <!-- Copy - paste -->
+      <section class="service-info">
+        <div class="service-info__container">
+          <div class="service-info__heading">
+            <h2>solar</h2>
+            <p>we are a certified company & provide best plumbing services for you & your company.</p>
+            <a>learn more</a>
+          </div>
+          <div class="service-info__grid">
+            <div class="service-info__card">
+              <picture>
+                <source srcset="img/solar.webp" type="image/webp">
+                <img class="image" src="img/solar.jpg" alt="bathroom" loading="lazy" />
+              </picture>
+            </div>
+            <p class="service-info__desc">
+              Solar energy is the energy of the future. The sun shines every day, giving us warmth, light and energy.
+            </p>
+            <div class="service-info__card service-info__card-next">
+              <picture>
+                <source srcset="img/solar-2.webp" type="image/webp">
+                <img class="image" src="img/solar-2.jpg" alt="bathroom" loading="lazy" />
+              </picture>
+            </div>
+            <p class="service-info__desc">
+              Energy that you can use to take warm showers and heat your home. This way you can reduce your heating costs and save valuable fuel.
+            </p>
+          </div>
+          <ul class="service-info__list">
+            <li>Installation of solar systems</li>
+            <li>Maintenance and repair of solar systems</li>
+            <li>Spare parts delivery with and without installation</li>
+            <li>Year-round fault and emergency service</li>
+          </ul>
+        </div>
+      </section>
+      <!--  -->
+      @@include('./components//banner.html', {
+        "title": "Your Plumbing company",
+        "desc": "We are the professionals when it comes to heating systems. Our competent employees install complete heating systems quickly and reliably. With us you can trust in brand quality. Our services for you in the field of heating technology:",
+        "btnText": "request offer now"
+       })
+       @@include('./components/further.html')
+      </main>
+      @@include('./components/footer.html')
+    </div>
+  </body>
+</html>

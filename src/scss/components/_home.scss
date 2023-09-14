@@ -1,0 +1,279 @@
+.achievements {
+  padding: 85px 0 100px;
+
+  &__list {
+    @include resetList;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__item {
+    span {
+      display: block;
+      text-align: center;
+    }
+
+    span:first-child {
+      font-family: STIXTwoMath, sans-serif;
+      font-size: 109px;
+    }
+
+    span:last-child {
+      color: $grey;
+      font-size: 26px;
+    }
+  }
+
+  &__services {
+    margin: 191px 0 0;
+  }
+
+  &__desc {
+    max-width: 66%;
+    margin: 47px 0;
+    color: $grey;
+  }
+
+  &__btn {
+    background-color: $light;
+    color: $dark;
+  }
+}
+
+.services {
+  padding: 100px 0 140px;
+
+  &__list {
+    @include resetList;
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 42px 0;
+  }
+}
+
+.card {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 99px 0;
+  border-bottom: 1px solid $borderLine;
+
+  &__thumb {
+    overflow: hidden;
+    width: 353px;
+    height: 363px;
+    flex-shrink: 0;
+    border-radius: $borderRadius;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-basis: 40%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 36px 0;
+
+    p {
+      color: $grey;
+    }
+  }
+}
+
+.references {
+  &__container {
+    position: relative;
+    border-radius: $borderRadius;
+    background-color: $light;
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      bottom: -$borderRadius;
+      left: 0;
+      width: 100%;
+      height: $borderRadius * 2;
+      background: $light;
+      content: "";
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 68px;
+  }
+
+  &__column {
+    flex-basis: calc(50% - 120px);
+
+    > *:not(:last-child) {
+      margin-bottom: 90px;
+    }
+
+    h2 {
+      margin-top: 60px;
+      color: $dark;
+    }
+
+    a {
+      color: $dark;
+    }
+  }
+
+  &__thumb {
+    overflow: hidden;
+    border-radius: $borderRadius;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &-tall {
+      width: 705px;
+      height: 906px;
+    }
+
+    &-small {
+      width: 734px;
+      height: 842px;
+    }
+  }
+}
+
+
+
+.team {
+  &__list {
+    @include resetList;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 87px;
+    gap: 97px 0;
+  }
+
+  &__member {
+    position: relative;
+    border-bottom: 1px solid $borderLine;
+  }
+
+  &__name {
+    display: block;
+    font-size: 67px;
+  }
+
+  &__job {
+    display: block;
+    margin: 28px 0;
+    color: $grey;
+    font-size: 34px;
+  }
+
+  &__photo {
+    position: absolute;
+    right: 5%;
+    bottom: -50%;
+    overflow: hidden;
+    width: 414px;
+    height: 406px;
+    border-radius: $borderRadius;
+    opacity: 0;
+    transition-duration: 0.3s;
+    visibility: hidden;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__member:hover &__photo {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  h2 {
+    margin: 81px 0 247px;
+  }
+}
+
+.reviews {
+  &__container {
+    border-radius: $borderRadius;
+    background-color: $light;
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: space-between;
+    padding: 102px 0;
+    gap: 0 120px;
+
+    h2 {
+      margin-top: 60px;
+      color: $dark;
+    }
+  }
+
+  &__column {
+    flex-basis: calc(50% - 60px);
+
+    > *:not(:last-child) {
+      margin-bottom: 52px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    padding: 60px 36px;
+    border-radius: $borderRadius;
+    background-color: #f7f7f7;
+
+    > *:not(:last-child) {
+      margin-bottom: 43px;
+    }
+  }
+
+  &__name {
+    display: block;
+    color: black;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  &__desc {
+    display: block;
+    max-width: 80%;
+    color: $dimgrey;
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 0 23px;
+
+    img {
+      width: 69px;
+      height: 69px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__role {
+    color: $dimgrey;
+    font-size: 26px;
+  }
+}

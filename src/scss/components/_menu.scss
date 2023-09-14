@@ -16,8 +16,13 @@
   }
 
   &__list {
+    @include resetList;
+
     display: flex;
-    gap: 0 10px;
+    padding: 15px 81px;
+    border-radius: 71px;
+    background-color: $light;
+    gap: 0 60px;
 
     @media screen and (max-width: $burgerBreakPoint) {
       width: 100%;
@@ -29,14 +34,13 @@
     }
   }
 
-  // &__item {
-  // }
-
   &__link {
     padding: 15px 20px;
-    color: black;
-    font-size: 20px;
+    color: $dark;
+    font-family: "STIX Two Text", serif;
+    font-size: 28px;
     text-decoration: none;
+    text-transform: lowercase;
 
     @media screen and (max-width: $burgerBreakPoint) {
       font-size: 30px;

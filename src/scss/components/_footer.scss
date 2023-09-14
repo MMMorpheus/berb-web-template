@@ -1,0 +1,67 @@
+.footer {
+  &__container {
+    border-radius: $borderRadius;
+    background-color: $light;
+    padding-block: 87px;
+  }
+
+  &__company {
+    display: block;
+    margin-bottom: 10px;
+    color: $dark;
+    font-family: STIXTwoMath, serif;
+    font-size: 75px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__content {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-top: 1px solid $dimgrey;
+    border-bottom: 1px solid $dimgrey;
+    color: $dark;
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 80px 0;
+
+    span {
+      display: inline-block;
+      max-width: 45%;
+      color: $dimgrey;
+      font-family: inter, sans-serif;
+      font-size: 20px;
+    }
+
+    a {
+      color: inherit;
+      font-size: 22px;
+      text-decoration: none;
+    }
+  }
+
+  &__list {
+    @include resetList;
+
+    display: flex;
+    flex-direction: column;
+    gap: 21px 0;
+    justify-self: center;
+
+    a {
+      color: inherit;
+      font-size: 27px;
+      text-decoration: none;
+    }
+  }
+
+  &__list:last-child {
+    justify-self: end;
+  }
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  @@include('./components/head.html', { "title": "Main page" })
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        @@include('./components/contact.html')
+        <section class="hero">
+          <div class="hero__container">
+            <div class="hero__background hero-heating" aria-hidden="true"></div>
+            @@include('./components/header.html')
+          </div>
+        </section>
+        <!-- Copy - paste -->
+        <section class="service-info">
+          <div class="service-info__container">
+            <div class="service-info__heading">
+              <h2>heating</h2>
+              <p>we are a certified company & provide best plumbing services for you & your company.</p>
+              <a>learn more</a>
+            </div>
+            <div class="service-info__grid">
+              <div class="service-info__card">
+                <picture>
+                  <source srcset="img/heating.webp" type="image/webp">
+                  <img class="image" src="img/heating.jpg" alt="bathroom" loading="lazy" />
+                </picture>
+              </div>
+              <p class="service-info__desc">
+                The prices for heating oil and natural gas are rising and rising. But with intelligent heating technology, you can drastically reduce rising energy costs.
+              </p>
+              <div class="service-info__card service-info__card-next">
+                <picture>
+                  <source srcset="img/hero-heating.webp" type="image/webp">
+                  <img class="image" src="img/hero-heating.jpg" alt="bathroom" loading="lazy" />
+                </picture>
+              </div>
+              <p class="service-info__desc">
+                Innovative devices make it possible to curb energy consumption by up to 40%.
+              </p>
+            </div>
+            <ul class="service-info__list">
+              <li>Oil heating</li>
+              <li>Gas heating</li>
+              <li>Centar heating</li>
+              <li>Smartphone solutions</li>
+            </ul>
+          </div>
+        </section>
+        <!--  -->
+        @@include('./components//banner.html', {
+          "title": "Your Plumbing company",
+          "desc": "We are the professionals when it comes to heating systems. Our competent employees install complete heating systems quickly and reliably. With us you can trust in brand quality. Our services for you in the field of heating technology:",
+          "btnText": "request offer now"
+         })
+         @@include('./components/further.html')
+      </main>
+      @@include('./components/footer.html')
+    </div>
+  </body>
+</html>

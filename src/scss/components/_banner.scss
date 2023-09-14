@@ -1,0 +1,23 @@
+.banner {
+  &__container {
+    @include imageSetWithGradient("linear-gradient(90deg, #FFF 7.17%, rgba(255, 255, 255, 0.32) 88.4%)", "../img/help");
+
+    display: flex;
+    height: 932px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border-radius: $borderRadius;
+    background-size: cover;
+    gap: 55px 0;
+  }
+
+  h2 {
+    color: $dark;
+  }
+
+  p {
+    max-width: 60%;
+    color: $dimgrey;
+  }
+}

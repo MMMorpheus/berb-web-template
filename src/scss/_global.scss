@@ -1,6 +1,66 @@
-// Body
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: $fontPrimary;
+  background-color: $background;
+  color: $light;
+  font-family: $fontPrimary, sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: STIXTwoMath, serif;
+}
+
+h1 {
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 105px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h3 {
+  font-family: Ubuntu, sans-serif;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+p {
+  margin: 0;
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+a {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 // Container
@@ -41,9 +101,20 @@ body {
 
 .dis-scroll {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   overflow: hidden;
   width: 100%;
   overscroll-behavior: none;
+}
+
+.btn {
+  @include resetBtn;
+
+  padding: 19px 70px;
+  border-radius: 50px;
+  background-color: $dark;
+  color: $light;
+  font-family: STIXTwoText, serif;
+  font-size: 28px;
 }

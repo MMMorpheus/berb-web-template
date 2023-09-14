@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+  @@include('./components/head.html', { "title": "Berb - main" })
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        @@include('./components/contact.html')
+        <section class="hero">
+          <div class="hero__container">
+            <div
+              class="hero__background hero-home"
+              aria-hidden="true"></div>
+            @@include('./components/header.html')
+            <h1 class="hero__title">your plumbing specialist</br>in cologne</h1>
+            <p class="hero__desc desc">
+              we are a certified company & provide best plumbing services for you & your company.
+            </p>
+            <button class="hero__btn btn">Button</button>
+            <a
+              href="#"
+              class="hero__link"
+              ><span>learn more</span>
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                stroke="#FDFDFD"
+                xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path
+                    id="Pfad 472"
+                    d="M1.5 16.5L16.5 1.5"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    id="Pfad 473"
+                    d="M1.5 1.5H16.5V16.5"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="achievements">
+          <div class="achievements__container">
+            <ul class="achievements__list">
+              <li class="achievements__item"><span>2020</span><span>FOUNDED</span></li>
+              <li class="achievements__item"><span>5</span><span>TEAM MEMBER</span></li>
+              <li class="achievements__item"><span>500</span><span>Projects</span></li>
+              <li class="achievements__item"><span>100%</span><span>HAPPY CLIENTS</span></li>
+            </ul>
+            <h2 class="achievements__services">
+              sanitary / heating / solar
+            </h2>
+            <p class="achievements__desc desc">The company is a master business, in the 1st generation, which was founded in 2020 in Cologne. Our team of employees is specialized in all modern technologies around plumbing, heating and solar.</p>
+            <button class="achievements__btn btn">make appointment now</button>
+          </div>
+        </section>
+        <section class="services">
+          <div class="services__container">
+            <h2 class="services__title">Our Services</h2>
+            <ul class="services__list">
+              <li class="services__card card">
+                <div class="card__thumb">
+                  <picture>
+                    <source srcset="img/serv-1.webp" type="image/webp">
+                    <img class="image" src="img/serv-1.jpg" alt="bathroom thumb" loading="lazy" />
+                  </picture>
+                </div>
+                <div class="card__content">
+                  <h3>sanitary</h3>
+                  <p>Would you like a new bathroom? Or would you like to carry out a long-overdue modernization? In us you will find a competent and reliable partner.</p>
+                  <a>learn more</a>
+                </div>
+              </li>
+              <li class="services__card card">
+                <div class="card__thumb">
+                  <picture>
+                    <source srcset="img/serv-2.webp" type="image/webp">
+                    <img class="image" src="img/serv-2.jpg" alt="bathroom thumb" loading="lazy" />
+                  </picture>
+                </div>
+                <div class="card__content">
+                  <h3>heating</h3>
+                  <p>Would you like a new bathroom? Or would you like to carry out a long-overdue modernization? In us you will find a competent and reliable partner.</p>
+                  <a>learn more</a>
+                </div>
+              </li>
+              <li class="services__card card">
+                <div class="card__thumb">
+                  <picture>
+                    <source srcset="img/serv-3.webp" type="image/webp">
+                    <img class="image" src="img/serv-3.jpg" alt="bathroom thumb" loading="lazy" />
+                  </picture>
+                </div>
+                <div class="card__content">
+                  <h3>solar</h3>
+                  <p>Would you like a new bathroom? Or would you like to carry out a long-overdue modernization? In us you will find a competent and reliable partner.</p>
+                  <a>learn more</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="references">
+          <div class="references__container">
+            <div class="references__gallery">
+              <div class="references__column">
+                <h2>References</h2>
+                <div class="references__thumb references__thumb-tall">
+                  <picture>
+                    <source srcset="img/ref-1.webp" type="image/webp">
+                    <img class="image" src="img/ref-1.jpg" alt="bathroom" loading="lazy" />
+                  </picture>
+                </div>
+                <div class="references__thumb references__thumb-tall">
+                  <picture>
+                    <source srcset="img/ref-2.webp" type="image/webp">
+                    <img class="image" src="img/ref-2.jpg" alt="bathroom" loading="lazy" />
+                  </picture>
+                </div>
+              </div>
+              <div class="references__column">
+                <div class="references__thumb references__thumb-small">
+                  <picture>
+                    <source srcset="img/ref-3.webp" type="image/webp">
+                    <img class="image" src="img/ref-3.jpg" alt="bathroom" loading="lazy" />
+                  </picture>
+                </div>
+                <div class="references__thumb references__thumb-small">
+                  <picture>
+                    <source srcset="img/ref-4.webp" type="image/webp">
+                    <img class="image" src="img/ref-4.jpg" alt="bathroom" loading="lazy" />
+                  </picture>
+                </div>
+                <a>show me more references</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('./components//banner.html', {
+          "title": "How can we help you?",
+          "desc": "Plumbing, Heating & Solar from Cologne. With us you get services from one from one source. Let us prepare your non-binding offer from us.",
+          "btnText": "request offer now"
+         })
+        <section class="team">
+          <div class="team__container">
+            <h2>Our Team</h2>
+            <ul class="team__list">
+              <li class="team__member">
+                <span class="team__name">Raphaele Slater</span>
+                <span class="team__job">CEO / MASTER INSTALLER</span>
+                <div class="team__photo">
+                  <picture>
+                    <source srcset="img/raphael.webp" type="image/webp">
+                    <img class="image" src="img/raphael.jpg" alt="Raphael Slater" loading="lazy" />
+                  </picture>
+                </div>
+              </li>
+              <li class="team__member">
+                <span class="team__name">Mario Mcclain</span>
+                <span class="team__job">MASTER INSTALLER</span>
+                <div class="team__photo">
+                  <picture>
+                    <source srcset="img/raphael.webp" type="image/webp">
+                    <img class="image" src="img/raphael.jpg" alt="Mario Mcclain" loading="lazy" />
+                  </picture>
+                </div>
+              </li>
+              <li class="team__member">
+                <span class="team__name">Mitchell Wilson</span>
+                <span class="team__job">INSTALLER</span>
+                <div class="team__photo">
+                  <picture>
+                    <source srcset="img/raphael.webp" type="image/webp">
+                    <img class="image" src="img/raphael.jpg" alt="Mitchell Wilson" loading="lazy" />
+                  </picture>
+                </div>
+              </li>
+              <li class="team__member">
+                <span class="team__name">Grover Kelley</span>
+                <span class="team__job">INSTALLER</span>
+                <div class="team__photo">
+                  <picture>
+                    <source srcset="img/raphael.webp" type="image/webp">
+                    <img class="image" src="img/raphael.jpg" alt="Grover Kelley" loading="lazy" />
+                  </picture>
+                </div>
+              </li>
+              <li class="team__member">
+                <span class="team__name">Seth Blair</span>
+                <span class="team__job">TRAINEE INSTALLER</span>
+                <div class="team__photo">
+                  <picture>
+                    <source srcset="img/raphael.webp" type="image/webp">
+                    <img class="image" src="img/raphael.jpg" alt="Seth Blair" loading="lazy" />
+                  </picture>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="reviews">
+          <div class="reviews__container">
+            <div class="reviews__gallery">
+              <div class="reviews__column">
+                <h2>What People´s Say</h2>
+                <div class="reviews__item">
+                  <span class="reviews__name">„Top Service“</span>
+                  <span class="reviews__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</span>
+                  <div class="reviews__author">
+                      <picture>
+                        <source srcset="img/raphael.webp" type="image/webp">
+                        <img class="image" src="img/raphael.jpg" alt="Steffan Copeland" loading="lazy" />
+                      </picture>
+                      <div>
+                        <span class="reviews__name">Steffan Copeland</span>
+                        <span class="reviews__role">private customer</span>
+                      </div>
+                  </div>
+                </div>
+                <div class="reviews__item">
+                  <span class="reviews__name">„Top Service“</span>
+                  <span class="reviews__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</span>
+                  <div class="reviews__author">
+                    <picture>
+                      <source srcset="img/raphael.webp" type="image/webp">
+                      <img class="image" src="img/raphael.jpg" alt="Steffan Copeland" loading="lazy" />
+                    </picture>
+                    <div>
+                      <span class="reviews__name">Steffan Copeland</span>
+                      <span class="reviews__role">private customer</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__item">
+                  <span class="reviews__name">„Top Service“</span>
+                  <span class="reviews__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</span>
+                  <div class="reviews__author">
+                    <picture>
+                      <source srcset="img/raphael.webp" type="image/webp">
+                      <img class="image" src="img/raphael.jpg" alt="Steffan Copeland" loading="lazy" />
+                    </picture>
+                    <div>
+                      <span class="reviews__name">Steffan Copeland</span>
+                      <span class="reviews__role">private customer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__column">
+                <div class="reviews__item">
+                  <span class="reviews__name">„Top Service“</span>
+                  <span class="reviews__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</span>
+                  <div class="reviews__author">
+                    <picture>
+                      <source srcset="img/raphael.webp" type="image/webp">
+                      <img class="image" src="img/raphael.jpg" alt="Steffan Copeland" loading="lazy" />
+                    </picture>
+                    <div>
+                      <span class="reviews__name">Steffan Copeland</span>
+                      <span class="reviews__role">private customer</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__item">
+                  <span class="reviews__name">„Top Service“</span>
+                  <span class="reviews__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</span>
+                  <div class="reviews__author">
+                    <picture>
+                      <source srcset="img/raphael.webp" type="image/webp">
+                      <img class="image" src="img/raphael.jpg" alt="Steffan Copeland" loading="lazy" />
+                    </picture>
+                    <div>
+                      <span class="reviews__name">Steffan Copeland</span>
+                      <span class="reviews__role">private customer</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__item">
+                  <span class="reviews__name">„Top Service“</span>
+                  <span class="reviews__desc">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd</span>
+                  <div class="reviews__author">
+                    <picture>
+                      <source srcset="img/raphael.webp" type="image/webp">
+                      <img class="image" src="img/raphael.jpg" alt="Steffan Copeland" loading="lazy" />
+                    </picture>
+                    <div>
+                      <span class="reviews__name">Steffan Copeland</span>
+                      <span class="reviews__role">private customer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('./components/further.html')
+      </main>
+      @@include('./components/footer.html')
+    </div>
+  </body>
+</html>
