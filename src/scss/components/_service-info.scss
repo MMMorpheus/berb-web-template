@@ -3,10 +3,19 @@
   top: -634px;
   margin-bottom: -634px;
 
+  @media screen and (max-width: $breakpoint992) {
+    top: -530px;
+    margin-bottom: -530px;
+  };
+
   &__container {
     border-radius: $borderRadius;
     background-color: $dark;
-    padding-block: 83px 153px;
+    padding-block: between(41.5px, 83px) between(50px, 153px);
+
+    @media screen and (max-width: $breakpoint768) {
+      border-radius: $borderRadiusMobile;
+    }
   }
 
   &__heading {
@@ -15,28 +24,45 @@
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: $breakpoint768) {
+      flex-direction: column;
+      gap: 15px 0;
+    }
+
     h2 {
       text-transform: uppercase;
     }
 
     p {
       flex-basis: 40%;
-      color: $grey
+      color: $grey;
+
+      @media screen and (max-width: $breakpoint768) {
+        text-align: center;
+      }
     }
   }
 
   &__grid {
     display: grid;
-    padding: 190px 0;
-    gap: 258px 112px;
+    padding: between(50px, 190px) 0;
+    gap: between(64.5px, 258px) between(28px, 112px);
     grid-template-columns: repeat(12, 1fr);
+
+    @media screen and (max-width: $breakpoint768) {
+      display: block;
+    }
   }
 
   &__card {
     overflow: hidden;
-    height: 905px;
+    height: between(407.25px, 905px, $breakpoint768);
     border-radius: $borderRadius;
     grid-column: span 5;
+
+    @media screen and (max-width: $breakpoint768) {
+      border-radius: $borderRadiusMobile;
+    }
 
     &-next {
       grid-column: 2 / span 5;
@@ -52,14 +78,21 @@
     align-self: end;
     color: $grey;
     grid-column: span 5;
+
+    @media screen and (max-width: $breakpoint992) {
+      margin: 50px 0;
+    }
+
+    @media screen and (max-width: $breakpoint480) {
+      margin: 25px 0;
+    }
   }
 
   &__list {
     li {
-      padding: 58px 0;
+      padding: between(20px, 58px) 0;
       border-top: 1px solid $dimgrey;
-      font-size: 45px;
+      font-size: between(22px, 45px);
     }
   }
-
 }

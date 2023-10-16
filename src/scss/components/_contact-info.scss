@@ -1,0 +1,37 @@
+.contact-info {
+  padding: 25px 0;
+
+  @media screen and (max-width: $breakpoint992) {
+    padding: 10px 0;
+  };
+
+  &__list {
+    @include resetList;
+
+    display: flex;
+    align-items: center;
+    gap: 0 between(15px, 96px);
+
+    @media screen and (max-width: $breakpoint768) {
+      justify-content: space-between;
+    };
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    color: $grey;
+    font-size: between(14px, 21px);
+    gap: 0 6px;
+
+    svg {
+      fill: currentcolor;
+    }
+  }
+
+  &__item:first-child {
+    @media screen and (max-width: $breakpoint768) {
+      display: none;
+    };
+  }
+}

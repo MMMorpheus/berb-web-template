@@ -1,7 +1,17 @@
+$gradient: linear-gradient(98deg, rgb(22 23 34 / 35%) 7.89%, rgb(0 0 0 / 0%) 90.37%);
+
 .hero {
   &__container {
     position: relative;
-    height: 1272px;
+    height: between(800px, 1272px);
+
+    @media screen and (max-width: $breakpoint480) {
+      height: 95vh;
+    }
+  }
+
+  &__container-contact {
+    height: between(800px, 1665px);
 
   }
 
@@ -11,30 +21,75 @@
     width: 100%;
     height: 100%;
     border-radius: $borderRadius;
-    animation: fade-in ease 1s;
+    animation: fade-in ease 1.2s;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     inset: 0;
+
+    @media screen and (max-width: $breakpoint480) {
+      border-radius: $borderRadiusMobile;
+    }
   }
 
   &__title {
     max-width: 53.5%;
     margin: 211px 0 37px;
+
+    @media screen and (max-width: $breakpoint1450) {
+      max-width: unset;
+      margin: between(150px, 211px, $breakpoint480, $breakpoint1450) 0 30px;
+    }
+
+    @media screen and (max-width: $breakpoint480) {
+      margin: 40% 0 5%;
+    };
   }
 
   &__desc {
     max-width: 40%;
     margin-bottom: 37px;
+
+    @media screen and (max-width: $breakpoint992) {
+      max-width: 60%;
+    }
+
+    @media screen and (max-width: $breakpoint480) {
+      max-width: 80%;
+      margin-bottom: 40%;
+    }
   }
 
   &__link {
+    display: inline-block;
     color: $light;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration-line: underline;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: #fdfdfd;
+
+      @media screen and (max-width: $breakpoint1450) {
+        width: 16px;
+        height: 16px;
+      };
+
+      @media screen and (max-width: $breakpoint992) {
+        width: 14px;
+        height: 14px;
+      };
+
+      @media screen and (max-width: $breakpoint768) {
+        width: 12px;
+        height: 12px;
+      };
+
+      @media screen and (max-width: $breakpoint480) {
+        width: 10px;
+        height: 10px;
+      }
+    }
   }
 
   &__btn {
@@ -43,26 +98,32 @@
 }
 
 .hero-home {
-  @include imageSetWithGradient("linear-gradient(90deg, rgb(40 44 86 / 70%) 0.31%, rgb(0 0 0 / 0%) 103.63%)", "../img/hero-home");
-
+  @include imageSetWithGradient(
+    "linear-gradient(90deg, rgb(40 44 86 / 70%) 0.31%, rgb(0 0 0 / 0%) 103.63%)",
+    "../img/hero-home"
+  );
 }
 
 .hero-sanitary {
-  @include imageSetWithGradient("linear-gradient(98deg, rgba(22, 23, 34, 0.35) 7.89%, rgba(0, 0, 0, 0.00) 90.37%)", "../img/hero-sanitary");
+  @include imageSetWithGradient($gradient, "../img/hero-sanitary");
 }
 
 .hero-heating {
-  @include imageSetWithGradient("linear-gradient(98deg, rgba(22, 23, 34, 0.35) 7.89%, rgba(0, 0, 0, 0.00) 90.37%)", "../img/hero-heating");
+  @include imageSetWithGradient($gradient, "../img/hero-heating");
 }
 
 .hero-solar {
-  @include imageSetWithGradient("linear-gradient(98deg, rgba(22, 23, 34, 0.35) 7.89%, rgba(0, 0, 0, 0.00) 90.37%)", "../img/hero-solar");
+  @include imageSetWithGradient($gradient, "../img/hero-solar");
 
-  background-position: bottom
+  background-position: bottom;
 }
 
 .hero-references {
-  @include imageSetWithGradient("linear-gradient(98deg, rgba(22, 23, 34, 0.35) 7.89%, rgba(0, 0, 0, 0.00) 90.37%)", "../img/hero-references");
+  @include imageSetWithGradient($gradient, "../img/hero-references");
+}
+
+.hero-contact {
+  @include imageSetWithGradient($gradient, "../img/hero-contact");
 }
 
 @keyframes fade-in {

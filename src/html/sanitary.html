@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
-  @@include('./components/head.html', { "title": "Main page" })
+  @@include('./components/head.html', { "title": "Sanitary" })
   <body>
     <div class="wrapper">
       <main class="main">
-        @@include('./components/contact.html')
+        @@include('./components/contact-info.html')
         <section class="hero">
           <div class="hero__container">
             <div class="hero__background hero-sanitary" aria-hidden="true"></div>
@@ -15,39 +15,39 @@
         <section class="service-info">
           <div class="service-info__container">
             <div class="service-info__heading">
-              <h2>sanitary</h2>
-              <p>we are a certified company & provide best plumbing services for you & your company.</p>
+              <h2 data-aos="fade-right">sanitary</h2>
+              <p data-aos="fade-up">we are a certified company & provide best plumbing services for you & your company.</p>
               <a>learn more</a>
             </div>
             <div class="service-info__grid">
-              <div class="service-info__card">
+              <div class="service-info__card" data-aos="zoom-in">
                 <picture>
                   <source srcset="img/ref-2.webp" type="image/webp">
                   <img class="image" src="img/ref-2.jpg" alt="bathroom" loading="lazy" />
                 </picture>
               </div>
-              <p class="service-info__desc">
+              <p class="service-info__desc" data-aos="fade-up">
                 Would you like a new bathroom? Or would you like to carry out a long- overdue modernization? In us you will find a competent and reliable partner.
               </p>
-              <div class="service-info__card service-info__card-next">
+              <div class="service-info__card service-info__card-next" data-aos="zoom-in">
                 <picture>
                   <source srcset="img/sanitary.webp" type="image/webp">
                   <img class="image" src="img/sanitary.jpg" alt="bathroom" loading="lazy" />
                 </picture>
               </div>
-              <p class="service-info__desc">
+              <p class="service-info__desc" data-aos="fade-up">
                 Professionally and thoroughly, we carry out all plumbing work for you, from simple maintenance or assembly to complex plumbing installations. We also perform thermographies for non-destructive pipe burst location.
               </p>
             </div>
             <ul class="service-info__list">
-              <li>Comprehensive & competent advice</li>
-              <li>Complete bathroom renovations</li>
-              <li>Professional execution of all installation work</li>
+              <li data-aos="fade-up">Comprehensive & competent advice</li>
+              <li data-aos="fade-up">Complete bathroom renovations</li>
+              <li data-aos="fade-up">Professional execution of all installation work</li>
             </ul>
           </div>
         </section>
         <!--  -->
-        @@include('./components//banner.html', {
+        @@include('./components/banner.html', {
           "title": "Your Plumbing company",
           "desc": "As your plumbing company, we have all the important information for your remodeled bathroom.",
           "btnText": "request offer now"

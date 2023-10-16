@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
-  @@include('./components/head.html', { "title": "Main page" })
+  @@include('./components/head.html', { "title": "Heating" })
   <body>
     <div class="wrapper">
       <main class="main">
-        @@include('./components/contact.html')
+        @@include('./components/contact-info.html')
         <section class="hero">
           <div class="hero__container">
             <div class="hero__background hero-heating" aria-hidden="true"></div>
@@ -15,35 +15,35 @@
         <section class="service-info">
           <div class="service-info__container">
             <div class="service-info__heading">
-              <h2>heating</h2>
-              <p>we are a certified company & provide best plumbing services for you & your company.</p>
+              <h2 data-aos="fade-right">heating</h2>
+              <p data-aos="fade-up">we are a certified company & provide best plumbing services for you & your company.</p>
               <a>learn more</a>
             </div>
             <div class="service-info__grid">
-              <div class="service-info__card">
+              <div class="service-info__card" data-aos="zoom-in">
                 <picture>
                   <source srcset="img/heating.webp" type="image/webp">
                   <img class="image" src="img/heating.jpg" alt="bathroom" loading="lazy" />
                 </picture>
               </div>
-              <p class="service-info__desc">
+              <p class="service-info__desc" data-aos="fade-up">
                 The prices for heating oil and natural gas are rising and rising. But with intelligent heating technology, you can drastically reduce rising energy costs.
               </p>
-              <div class="service-info__card service-info__card-next">
+              <div class="service-info__card service-info__card-next" data-aos="zoom-in">
                 <picture>
                   <source srcset="img/hero-heating.webp" type="image/webp">
                   <img class="image" src="img/hero-heating.jpg" alt="bathroom" loading="lazy" />
                 </picture>
               </div>
-              <p class="service-info__desc">
+              <p class="service-info__desc" data-aos="fade-up">
                 Innovative devices make it possible to curb energy consumption by up to 40%.
               </p>
             </div>
             <ul class="service-info__list">
-              <li>Oil heating</li>
-              <li>Gas heating</li>
-              <li>Centar heating</li>
-              <li>Smartphone solutions</li>
+              <li data-aos="fade-up">Oil heating</li>
+              <li data-aos="fade-up">Gas heating</li>
+              <li data-aos="fade-up">Centar heating</li>
+              <li data-aos="fade-up">Smartphone solutions</li>
             </ul>
           </div>
         </section>

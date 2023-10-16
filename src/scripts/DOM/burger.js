@@ -22,10 +22,10 @@ export default () => {
       // If is opened, handling scroll and aria attr's
       if (isMenuOpened) {
         aria.open(burgerEl, 'menu');
-        scroll.disable();
+        // scroll.disable();
       } else {
         aria.close(burgerEl, 'menu');
-        scroll.enable();
+        // scroll.enable();
       }
     }
   });
@@ -38,11 +38,11 @@ export default () => {
     }
     if (isMenuOpened) {
       aria.close(burgerEl, 'menu');
-      scroll.enable();
+      // scroll.enable();
       isMenuOpened = false;
     }
-    if (e.target.tagName === 'A') {
-      navigation(e);
-    }
+    // if (e.target.tagName === 'A') {
+    //   navigation(e);
+    // }
   });
 };

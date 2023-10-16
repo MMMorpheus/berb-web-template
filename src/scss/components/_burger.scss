@@ -16,10 +16,11 @@
   }
 
   &__icon {
+    display: block;
     width: 3em;
     height: .375em;
     border-radius: 1em;
-    background: black;
+    background: $dark;
     transition: all 0.1s 0.3s, font-size 0s;
 
     &::before,
@@ -29,7 +30,7 @@
       width: 3em;
       height: 0.375em;
       border-radius: 1em;
-      background: black;
+      background: $dark;
       content: "";
       transition: all 0.3s 0.2s, font-size 0s;
     }

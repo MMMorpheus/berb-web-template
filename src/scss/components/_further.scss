@@ -1,28 +1,28 @@
 .further {
-  padding: 170px 0;
+  padding: between(85px, 170px) 0;
 
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 36px 0;
+    gap: between(18px, 36px) 0;
   }
 
   &__title {
     font-family: STIXTwoMath, serif;
-    font-size: 90px;
+    font-size: between(30px, 90px);
   }
 
   &__desc {
     max-width: 60%;
     color: $grey;
-    font-size: 34px;
+    font-size: between(20px, 34px);
     text-align: center;
   }
 
   &__btn {
-    margin-top: 46px;
+    margin-top: between(20px, 46px);
     background-color: $light;
     color: $dark;
   }

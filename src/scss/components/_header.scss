@@ -7,4 +7,10 @@
   &__logo {
     cursor: pointer;
   }
+
+  & > a[href^="contacts"] {
+    @media screen and (max-width: $breakpoint1450) {
+      display: none;
+    };
+  }
 }

@@ -1,0 +1,120 @@
+:root {
+  --marginOffset: 100px;
+}
+
+.references {
+  position: relative;
+  top: -634px;
+  margin-bottom: -634px;
+  background-color: $background;
+
+  @media screen and (max-width: $breakpoint992) {
+    top: -530px;
+    margin-bottom: -530px;
+  }
+
+  &__container {
+    border-radius: $borderRadius;
+    background-color: $dark;
+    padding-block: between(41.5px, 83px) between(50px, 153px);
+
+    @media screen and (max-width: $breakpoint768) {
+      border-radius: $borderRadiusMobile;
+    }
+  }
+
+  &__sanitary-section-slider {
+    display: flex;
+    height: between(360px, 900px);
+    align-items: flex-end;
+    margin: between(75px, 250px) 0 0;
+    gap: 0 between(20px, 62px);
+
+    span {
+      font-family: STIXTwoMath, serif;
+      font-size: clamp(2.25rem, 1.3269rem + 4.1026vw, 6.25rem); // 100 => 36
+      line-height: clamp(2.8125rem, 1.9471rem + 3.8462vw, 6.5625rem);
+      text-transform: uppercase;
+      transform: rotate(180deg);
+      writing-mode: vertical-lr;
+    }
+  }
+
+  &__slider-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__slider-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% + var(--marginOffset));
+    height: 100%;
+
+    @media screen and (max-width: $breakpoint480) {
+      width: 100%;
+    };
+    }
+
+  &__slide {
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: $borderRadius;
+      object-fit: cover;
+
+      @media screen and (max-width: $breakpoint768) {
+        border-radius: $borderRadiusMobile;
+      };
+    }
+  }
+
+  &__controls {
+    margin: 59px 0 0 163px;
+
+    @media screen and (max-width: $breakpoint768) {
+      margin: 29px 0 0 63px;
+    };
+
+    button {
+      margin-right: 79px;
+
+      @media screen and (max-width: $breakpoint768) {
+        margin-right: 39px;
+      }
+
+      &:active {
+        scale: 0.98;
+      }
+
+      @include resetBtn;;
+    }
+
+    svg {
+      width: 63px;
+      height: 39px;
+      fill: none;
+      stroke: white;
+
+      @media screen and (max-width: $breakpoint768) {
+        width: 31.5px;
+      height: 19px;
+      };
+    }
+  }
+
+  &__controls-disabled {
+    svg {
+      stroke: $grey;
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}

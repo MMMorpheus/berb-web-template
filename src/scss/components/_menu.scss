@@ -1,28 +1,36 @@
-:root {
-  // Задать согласно высоте шапки, чтоб меню не залазило под шапку
-  // Относительно этой величины рассчитывается высота мобильного меню, чтоб можно было скроллить
-  --offsetHeight: 98px;
-}
+$offsetHeight: 115px;
 
 .menu {
   @media screen and (max-width: $burgerBreakPoint) {
     position: fixed;
-    top: var(--offsetHeight);
-    left: 0;
-    width: 100%;
+    z-index: 2;
+    top: $offsetHeight;
+    right: 75px;
+    width: 40%;
     height: calc(100% - var(--offsetHeight));
-    transform: translateX(100%);
-    transition: transform 0.6s ease-in-out;
+    scale: 0;
+    transform-origin: top right;
+    transition: scale 0.6s ease-in-out;
   }
+
+  @media screen and (max-width: $breakpoint768) {
+    right: 55px;
+    width: 75%;
+  };
+
+  @media screen and (max-width: $breakpoint480) {
+    right: 40px;
+
+  };
 
   &__list {
     @include resetList;
 
     display: flex;
-    padding: 15px 81px;
+    padding: 15px between(48.6px, 81px, $breakpoint992);
     border-radius: 71px;
     background-color: $light;
-    gap: 0 60px;
+    gap: 0 between(36px, 60px, $breakpoint992);
 
     @media screen and (max-width: $burgerBreakPoint) {
       width: 100%;
@@ -30,24 +38,35 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
+      border-radius: 41px;
+      backdrop-filter: blur(10px);
+      background-color: rgb(255 255 255 / 50%);
+      border-top-right-radius: 0;
       overflow-y: auto;
     }
   }
 
   &__link {
-    padding: 15px 20px;
+    display: block;
+    padding: between(11.25px, 15px, $breakpoint992) between(15px, 20px, $breakpoint992);
     color: $dark;
     font-family: "STIX Two Text", serif;
-    font-size: 28px;
+    font-size: between(21px, 28px, $breakpoint992);
     text-decoration: none;
     text-transform: lowercase;
 
     @media screen and (max-width: $burgerBreakPoint) {
-      font-size: 30px;
-    };
+      font-size: 35px;
+    }
+  }
+
+  &__contact {
+    @media screen and (min-width: $breakpoint992) {
+      display: none;
+    }
   }
 
   &-active {
-    transform: translate(0);
+    scale: 1;
   }
 }

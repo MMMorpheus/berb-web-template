@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  @@include('./components/head.html', { "title": "Contact" })
+  <body>
+    <div class="wrapper">
+      <main class="main">
+        @@include('./components/contact-info.html')
+        <section class="hero">
+          <div class="hero__container hero__container-contact">
+            <div class="hero__background hero-contact" aria-hidden="true"></div>
+            @@include('./components/header.html')
+          </div>
+        </section>
+        <section class="contacts">
+          <div class="contacts__container">
+            <div class="contacts__heading">
+              <h2>contact</h2>
+              <ul>
+                <li class="contact__item">
+                  <svg
+                    width="15.1"
+                    height="21.6">
+                    <use xlink:href="img/sprite.svg#place"></use>
+                  </svg>
+                  <span>Berbstr. 1, Cologne, Germany</span>
+                </li>
+                <li class="contact__item">
+                  <svg
+                    width="18.2"
+                    height="18.2">
+                    <use xlink:href="img/sprite.svg#mail"></use>
+                  </svg>
+                  <span>berb@gmail.com</span>
+                </li>
+                <li class="contact__item">
+                  <svg
+                    width="22.7"
+                    height="17.9">
+                    <use xlink:href="img/sprite.svg#phone"></use>
+                  </svg>
+                  <span>0221/12 12 23 15</span>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__content">
+              <p>
+                broken pipe, defective heating or installation of a
+                new washbasin - we come and help you out.<br /><br />Our 24h emergency service will be happy to assist you!
+              </p>
+              <button class="btn">Call 24 hours emergency number</button>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('./components/footer.html')
+    </div>
+  </body>
+</html>

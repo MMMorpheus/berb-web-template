@@ -1,16 +1,212 @@
 <!doctype html>
 <html lang="en">
-  @@include('./components/head.html', { "title": "Main page" })
+  @@include('./components/head.html', { "title": "References" })
   <body>
     <div class="wrapper">
       <main class="main">
-        @@include('./components/contact.html')
+        @@include('./components/contact-info.html')
         <section class="hero">
           <div class="hero__container">
             <div class="hero__background hero-references" aria-hidden="true"></div>
             @@include('./components/header.html')
           </div>
-        </section>      </main>
+        </section>
+        <section class="references">
+          <div class="references__container">
+            <div class="service-info__heading">
+              <h2 data-aos="fade-right">references</h2>
+              <a>learn more</a>
+            </div>
+            <div class="references__sanitary-section-slider">
+              <span>sanitary</span>
+              <!-- First slider -->
+              <div class="references__slider-box">
+                <div class="references__slider-wrapper">
+                  <div class="references__slider swiper" data-sanitary>
+                    <div class="swiper-wrapper">
+                      <div class="references__slide swiper-slide" data-aos="zoom-in" >
+                        <picture>
+                          <source srcset="img/ref-2.webp" type="image/webp">
+                          <img class="image" src="img/ref-2.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide" data-aos="zoom-in" data-aos-delay="150">
+                        <picture>
+                          <source srcset="img/sanitary.webp" type="image/webp">
+                          <img class="image" src="img/sanitary.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide" data-aos="zoom-in" data-aos-delay="300">
+                        <picture>
+                          <source srcset="img/ref.webp" type="image/webp">
+                          <img class="image" src="img/ref.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide">
+                        <picture>
+                          <source srcset="img/ref-2.webp" type="image/webp">
+                          <img class="image" src="img/ref-2.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide">
+                        <picture>
+                          <source srcset="img/sanitary.webp" type="image/webp">
+                          <img class="image" src="img/sanitary.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide">
+                        <picture>
+                          <source srcset="img/ref.webp" type="image/webp">
+                          <img class="image" src="img/ref.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="references__controls">
+              <button data-sanitary="prev">
+                <svg>
+                <use xlink:href="img/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+              <button data-sanitary="next">
+                <svg>
+                <use xlink:href="img/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+            </div>
+            <div class="references__sanitary-section-slider">
+              <span>heating</span>
+              <!-- Second slider -->
+              <div class="references__slider-box">
+                <div class="references__slider-wrapper">
+                  <div class="references__slider swiper" data-heating>
+                    <div class="swiper-wrapper">
+                      <div class="references__slide swiper-slide" data-aos="zoom-in">
+                        <picture>
+                          <source srcset="img/hero-heating.webp" type="image/webp">
+                          <img class="image" src="img/hero-heating.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide" data-aos="zoom-in" data-aos-delay="150">
+                        <picture>
+                          <source srcset="img/sanitary.webp" type="image/webp">
+                          <img class="image" src="img/sanitary.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide" data-aos="zoom-in" data-aos-delay="300">
+                        <picture>
+                          <source srcset="img/ref.webp" type="image/webp">
+                          <img class="image" src="img/ref.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide">
+                        <picture>
+                          <source srcset="img/hero-heating.webp" type="image/webp">
+                          <img class="image" src="img/hero-heating.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide">
+                        <picture>
+                          <source srcset="img/sanitary.webp" type="image/webp">
+                          <img class="image" src="img/sanitary.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide">
+                        <picture>
+                          <source srcset="img/ref.webp" type="image/webp">
+                          <img class="image" src="img/ref.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="references__controls">
+              <button data-heating="prev">
+                <svg>
+                <use xlink:href="img/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+              <button data-heating="next">
+                <svg>
+                <use xlink:href="img/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+            </div>
+            <div class="references__sanitary-section-slider">
+              <span>solar</span>
+              <!-- Third slider -->
+              <div class="references__slider-box">
+                <div class="references__slider-wrapper">
+                  <div class="references__slider swiper" data-solar>
+                    <div class="swiper-wrapper">
+                      <div class="references__slide swiper-slide" data-aos="zoom-in">
+                        <picture>
+                          <source srcset="img/ref-2.webp" type="image/webp">
+                          <img class="image" src="img/ref-2.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide" data-aos="zoom-in" data-aos-delay="150">
+                        <picture>
+                          <source srcset="img/sanitary.webp" type="image/webp">
+                          <img class="image" src="img/sanitary.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide" data-aos="zoom-in" data-aos-delay="300">
+                        <picture>
+                          <source srcset="img/ref.webp" type="image/webp">
+                          <img class="image" src="img/ref.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide">
+                        <picture>
+                          <source srcset="img/ref-2.webp" type="image/webp">
+                          <img class="image" src="img/ref-2.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide">
+                        <picture>
+                          <source srcset="img/sanitary.webp" type="image/webp">
+                          <img class="image" src="img/sanitary.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                      <div class="references__slide swiper-slide">
+                        <picture>
+                          <source srcset="img/ref.webp" type="image/webp">
+                          <img class="image" src="img/ref.jpg" alt="reference" loading="lazy" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="references__controls">
+              <button data-solar="prev">
+                <svg>
+                <use xlink:href="img/sprite.svg#arrow-left"></use>
+              </svg>
+            </button>
+              <button data-solar="next">
+                <svg>
+                <use xlink:href="img/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+            </div>
+          </div>
+          </div>
+        </section>
+        @@include('./components/banner.html', {
+          "title": "Your Plumbing company",
+          "desc": "As your plumbing company, we have all the important information for your remodeled bathroom.",
+          "btnText": "request offer now"
+         })
+         @@include('./components/further.html')
+      </main>
       @@include('./components/footer.html')
     </div>
   </body>

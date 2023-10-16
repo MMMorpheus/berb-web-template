@@ -19,15 +19,15 @@ h3 {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: clamp(2.25rem, 1.3269rem + 4.1026vw, 6.25rem); // 100 => 36
   font-style: normal;
   font-weight: 400;
-  line-height: 105px;
+  line-height: clamp(2.8125rem, 1.9471rem + 3.8462vw, 6.5625rem);
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 90px;
+  font-size: clamp(1.75rem, 0.4583rem + 4.3056vw, 5.625rem); // 90 => 28
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -35,7 +35,7 @@ h2 {
 
 h3 {
   font-family: Ubuntu, sans-serif;
-  font-size: 45px;
+  font-size: clamp(1.625rem, 1.2292rem + 1.3194vw, 2.8125rem); // 45 => 26
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -43,18 +43,22 @@ h3 {
 
 p {
   margin: 0;
-  font-size: 34px;
+  font-size: clamp(1.125rem, 0.8942rem + 1.0256vw, 2.125rem);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 
 a {
-  font-size: 30px;
+  font-size: clamp(1rem, 0.7981rem + 0.8974vw, 1.875rem);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  text-decoration-line: underline;
+  text-decoration: none;
+
+  span { //stylelint-disable-line
+    text-decoration-line: underline;
+  }
 }
 
 img {
@@ -64,26 +68,30 @@ img {
 }
 
 // Container
-[class*="__container"] {
+[class*="container"] {
   width: 100%;
   max-width: ($containerWidth + $containerSafePadding) + px;
   padding: 0 $containerInlinePadding + px;
   margin: 0 auto;
 
   @media (max-width: $breakpoint1450) {
-    max-width: 1200px;
+    max-width: 1300px;
+    padding: 0 65px;
   }
 
   @media (max-width: $breakpoint992) {
     max-width: 970px;
+
   }
 
   @media (max-width: $breakpoint768) {
     max-width: 740px;
+    padding: 0 45px;
   }
 
   @media (max-width: $breakpoint480) {
     max-width: none;
+    padding: 0 30px;
   }
 }
 
@@ -111,10 +119,10 @@ img {
 .btn {
   @include resetBtn;
 
-  padding: 19px 70px;
+  padding: 19px between(35px, 70px);
   border-radius: 50px;
   background-color: $dark;
   color: $light;
   font-family: STIXTwoText, serif;
-  font-size: 28px;
+  font-size: between(16px, 28px);
 }

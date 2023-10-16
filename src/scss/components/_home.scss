@@ -1,5 +1,5 @@
 .achievements {
-  padding: 85px 0 100px;
+  padding: between(40px, 85px) 0 between(50px, 100px);
 
   &__list {
     @include resetList;
@@ -7,9 +7,24 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    @media screen and (max-width: $breakpoint768) {
+      flex-wrap: wrap;
+      gap: 25px 0;
+    }
+
+    @media screen and (max-width: $breakpoint480) {
+      flex-direction: column;
+    }
   }
 
   &__item {
+    flex-basis: 25%;
+
+    @media screen and (max-width: $breakpoint768) {
+      flex-basis: 50%;
+    }
+
     span {
       display: block;
       text-align: center;
@@ -17,33 +32,50 @@
 
     span:first-child {
       font-family: STIXTwoMath, sans-serif;
-      font-size: 109px;
+      font-size: clamp(3.125rem, 1.8958rem + 4.0972vw, 6.8125rem);
     }
 
     span:last-child {
       color: $grey;
-      font-size: 26px;
+      font-size: clamp(1.125rem, 0.9583rem + 0.5556vw, 1.625rem);
+    }
+
+    span[data-percentage]::after {
+      content: "%"
     }
   }
 
   &__services {
-    margin: 191px 0 0;
+    margin: between(80px, 191px) 0 0;
+
+    @media screen and (max-width: $breakpoint768) {
+      text-align: center;
+    }
   }
 
   &__desc {
     max-width: 66%;
-    margin: 47px 0;
+    margin: between(30px, 47px) 0;
     color: $grey;
+
+    @media screen and (max-width: $breakpoint768) {
+      max-width: unset;
+    }
   }
 
   &__btn {
     background-color: $light;
     color: $dark;
+
+    @media screen and (max-width: $breakpoint768) {
+      display: block;
+      margin: 0 auto;
+    }
   }
 }
 
 .services {
-  padding: 100px 0 140px;
+  padding: between(50px, 100px) 0 between(70px, 140px);
 
   &__list {
     @include resetList;
@@ -59,20 +91,29 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 99px 0;
+  padding: between(35px, 99px) 0;
   border-bottom: 1px solid $borderLine;
+
+  @media screen and (max-width: $breakpoint768) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__thumb {
     overflow: hidden;
-    width: 353px;
-    height: 363px;
+    width: between(264px, 353px);
+    height: between(272px, 363px);
     flex-shrink: 0;
     border-radius: $borderRadius;
+
+    @media screen and (max-width: $breakpoint768) {
+      border-radius: $borderRadiusMobile;
+    }
 
     img {
       height: 100%;
       object-fit: cover;
-    }
+    };
   }
 
   &__content {
@@ -82,17 +123,58 @@
     justify-content: center;
     gap: 36px 0;
 
+    @media screen and (max-width: $breakpoint768) {
+      align-items: center;
+      margin-top: 24px;
+      gap: 24px 0;
+    }
+
     p {
       color: $grey;
     }
   }
+
+  &__link {
+    color: $light;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: #fdfdfd;
+
+      @media screen and (max-width: $breakpoint1450) {
+        width: 16px;
+        height: 16px;
+      }
+
+      @media screen and (max-width: $breakpoint992) {
+        width: 14px;
+        height: 14px;
+      }
+
+      @media screen and (max-width: $breakpoint768) {
+        width: 12px;
+        height: 12px;
+      }
+
+      @media screen and (max-width: $breakpoint480) {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
 }
 
-.references {
-  &__container {
+.home__references {
+  &-container {
     position: relative;
     border-radius: $borderRadius;
     background-color: $light;
+
+    @media screen and (max-width: $breakpoint768) {
+      border-radius: $borderRadiusMobile;
+    }
 
     &::after {
       position: absolute;
@@ -106,21 +188,34 @@
     }
   }
 
-  &__gallery {
+  &-gallery {
     display: flex;
     justify-content: space-between;
-    padding: 100px 0 68px;
+    padding: between(50px, 100px) 0 between(34px, 68px);
+
+    @media screen and (max-width: $breakpoint768) {
+      flex-direction: column;
+    }
   }
 
-  &__column {
+  &-column {
     flex-basis: calc(50% - 120px);
 
+    @media screen and (max-width: $breakpoint992) {
+      flex-basis: calc(50% - 60px);
+    }
+
+    @media screen and (max-width: $breakpoint768) {
+      flex-basis: 100%;
+      margin-bottom: 30px;
+    }
+
     > *:not(:last-child) {
-      margin-bottom: 90px;
+      margin-bottom: between(30px, 90px, $breakpoint768);
     }
 
     h2 {
-      margin-top: 60px;
+      margin-top: between(30px, 60px, $breakpoint480, $breakpoint768);
       color: $dark;
     }
 
@@ -129,9 +224,14 @@
     }
   }
 
-  &__thumb {
+  &-thumb {
     overflow: hidden;
     border-radius: $borderRadius;
+
+    @media screen and (max-width: $breakpoint768) {
+      border-radius: $borderRadiusMobile;
+      margin: 0 auto;
+    }
 
     img {
       height: 100%;
@@ -139,18 +239,30 @@
     }
 
     &-tall {
-      width: 705px;
-      height: 906px;
+      width: between(282px, 705px, $breakpoint768);
+      height: between(362.4px, 906px, $breakpoint768);
+
+      @media screen and (max-width: $breakpoint768) {
+        width: between(282px, 634.5px, $breakpoint480, $breakpoint768);
+        height: between(362.4px, 906px, $breakpoint480, $breakpoint768);
+      }
     }
 
     &-small {
-      width: 734px;
-      height: 842px;
+      width: between(293.6px, 734px, $breakpoint768);
+      height: between(336.8px, 842px, $breakpoint768);
+
+      @media screen and (max-width: $breakpoint768) {
+        width: between(282px, 660.6px, $breakpoint480, $breakpoint768);
+        height: between(362.4px, 757.8px, $breakpoint480, $breakpoint768);
+      }
     }
   }
 }
 
-
+.home__references + section {
+  background-color: unset;
+}
 
 .team {
   &__list {
@@ -159,7 +271,11 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 87px;
-    gap: 97px 0;
+    gap: between(20px, 97px) 0;
+
+    @media screen and (max-width: $breakpoint480) {
+      margin-bottom: 40px;
+    };
   }
 
   &__member {
@@ -169,14 +285,18 @@
 
   &__name {
     display: block;
-    font-size: 67px;
+    font-size: clamp(1.625rem, 0.7708rem + 2.8472vw, 4.1875rem);
   }
 
   &__job {
     display: block;
     margin: 28px 0;
     color: $grey;
-    font-size: 34px;
+    font-size: clamp(1.125rem, 0.7917rem + 1.1111vw, 2.125rem);
+
+    @media screen and (max-width: $breakpoint480) {
+      margin: 14px 0;
+    };
   }
 
   &__photo {
@@ -191,10 +311,28 @@
     transition-duration: 0.3s;
     visibility: hidden;
 
+    @media screen and (max-width: $breakpoint768) {
+      top: 0;
+      right: 0;
+      bottom: unset;
+      width: 100px;
+      height: 100px;
+      border-radius: $borderRadiusMobile;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    @media screen and (max-width: $breakpoint480) {
+      width: 70px;
+      height: 70px;
+      border-radius: 16px;
+
+    };
+
     img {
       height: 100%;
       object-fit: cover;
-    }
+    };
   }
 
   &__member:hover &__photo {
@@ -203,7 +341,7 @@
   }
 
   h2 {
-    margin: 81px 0 247px;
+    margin: between(40px, 81px) 0 between(40px, 247px);
   }
 }
 
@@ -211,43 +349,59 @@
   &__container {
     border-radius: $borderRadius;
     background-color: $light;
+
+    @media screen and (max-width: $breakpoint768) {
+      border-radius: $borderRadiusMobile;
+    };
   }
 
   &__gallery {
     display: flex;
     justify-content: space-between;
-    padding: 102px 0;
-    gap: 0 120px;
+    padding: between(50px, 102px, $breakpoint480, $breakpoint768) 0;
+    gap: 0 between(30px, 120px);
+
+    @media screen and (max-width: $breakpoint768) {
+      flex-direction: column;
+    };
 
     h2 {
-      margin-top: 60px;
+      margin-top: between(20px, 60px, $breakpoint768);
       color: $dark;
     }
   }
 
   &__column {
-    flex-basis: calc(50% - 60px);
+    flex-basis: 50%;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
 
     > *:not(:last-child) {
-      margin-bottom: 52px;
+      margin-bottom: between(20px, 53px, $breakpoint768);
     }
   }
 
   &__item {
     width: 100%;
-    padding: 60px 36px;
+    padding: between(36px, 60px, $breakpoint480, $breakpoint768) 36px;
     border-radius: $borderRadius;
     background-color: #f7f7f7;
 
-    > *:not(:last-child) {
-      margin-bottom: 43px;
+    @media screen and (max-width: $breakpoint768) {
+      border-radius: $borderRadiusMobile;
     }
+
+    > *:not(:last-child) {
+      margin-bottom: between(15px, 43px, $breakpoint768);
+    };
   }
 
   &__name {
     display: block;
     color: black;
-    font-size: 40px;
+    font-size: between(20px, 40px, $breakpoint768);
     font-weight: 400;
   }
 
@@ -255,8 +409,12 @@
     display: block;
     max-width: 80%;
     color: $dimgrey;
-    font-size: 40px;
+    font-size: between(18px, 40px, $breakpoint768);
     font-weight: 400;
+
+    @media screen and (max-width: $breakpoint992) {
+      max-width: unset;
+    };
   }
 
   &__author {
@@ -269,11 +427,16 @@
       height: 69px;
       border-radius: 50%;
       object-fit: cover;
+
+      @media screen and (max-width: $breakpoint992) {
+        width: 51.75px;
+        height: 51.75px;
+      };
     }
   }
 
   &__role {
     color: $dimgrey;
-    font-size: 26px;
+    font-size: between(16px, 26px, $breakpoint768);;
   }
 }

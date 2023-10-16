@@ -16,7 +16,7 @@
 /// @example
 ///   width: between(300px, 600px, 480px, 1200px)
 ///   width: between(300px, 600px)
-@function between($minValue, $maxValue, $minViewport: 479.98px, $maxViewport: 1449.98px) {
+@function between($minValue, $maxValue, $minViewport: 479.98px, $maxViewport: 1820px) {
   $viewportRange: $maxViewport - $minViewport;
   $valueRange: $maxValue - $minValue;
 
